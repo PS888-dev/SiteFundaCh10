@@ -1,79 +1,121 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8"> <!-- รองรับภาษาไทย -->
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ให้พอดีจอมือถือ -->
   <title>ผู้ใช้และประเภทของ IS | บทที่ 10</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet"> <!-- ฟอนต์ Prompt -->
-  <link rel="stylesheet" href="style.css"> <!-- เชื่อมไฟล์ CSS --> <!-- เชื่อมไฟล์ CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- ฟอนต์ Prompt -->
+  <link rel="stylesheet" href="style.css"> <!-- เชื่อมไฟล์ CSS --> 
 </head>
+
 <body>
 
-<!-- ส่วนหัว (header): โลโก้คณะ + ชื่อบทเรียน -->
-<header>
-  <!-- โลโก้คณะแบบ 3 มิติ หมุนได้: ใช้รูปเดียวกัน 2 ด้าน (หน้า-หลัง) แล้วหมุนด้วย CSS -->
-  <div class="logo3d"><div>
-    <img src="images/logo.png" alt="โลโก้คณะ">
-    <img src="images/logo.png" alt="">
-  </div></div>
-  <h1>บทที่ 10 ระบบสารสนเทศและเทคโนโลยีสารสนเทศ</h1>
-  <p>คณะเทคโนโลยีและการจัดการอุตสาหกรรม</p>
-</header>
+  <!-- ส่วนหัว (header): โลโก้คณะ + ชื่อบทเรียน -->
+  <header>
+    <!-- โลโก้คณะแบบ 3 มิติ หมุนได้: ใช้รูปเดียวกัน 2 ด้าน (หน้า-หลัง) แล้วหมุนด้วย CSS -->
+    <div class="logo3d">
+      <div>
+        <img src="images/logo.png" alt="โลโก้คณะ">
+        <img src="images/logo.png" alt="">
+      </div>
+    </div>
+    <h1>บทที่ 10 ระบบสารสนเทศและเทคโนโลยีสารสนเทศ</h1>
+    <p>คณะเทคโนโลยีและการจัดการอุตสาหกรรม</p>
+  </header>
 
-<!-- แถบเมนู (navbar) -->
-<nav>
-  <a href="index.html">หน้าแรก</a>
-  <a href="content1.html">1. IS และ IT</a>
-  <a href="content2.html" class="on">2. ผู้ใช้และประเภทของ IS</a>
-  <a href="content3.html">3. IT พัฒนาประเทศ และ XR</a>
-  <a href="content4.html">4. หน่วยงานของไทย</a>
-  <a href="credit.html">Credit</a>
-</nav>
-
-<div class="wrap">
-  <!-- แถบด้านข้าง (sidebar) -->
-  <aside>
-    <b>สารบัญ</b>
+  <!-- แถบเมนู (navbar) -->
+  <nav>
     <a href="index.html">หน้าแรก</a>
     <a href="content1.html">1. IS และ IT</a>
     <a href="content2.html" class="on">2. ผู้ใช้และประเภทของ IS</a>
     <a href="content3.html">3. IT พัฒนาประเทศ และ XR</a>
     <a href="content4.html">4. หน่วยงานของไทย</a>
     <a href="credit.html">Credit</a>
-  </aside>
+  </nav>
 
-  <!-- เนื้อหาหลัก (main) -->
-  <main>
-    <h2>2. ระดับผู้ใช้และประเภทของ IS</h2>
-    <img src="images/pyramid.svg" alt="ระดับผู้ใช้">
-    <table>
-      <tr><th>ระดับ</th><th>ใช้ข้อมูลอย่างไร</th></tr>
-      <tr><td>Executive (ระดับสูง)</td><td>ใช้ข้อมูลภาพรวมเพื่อวางกลยุทธ์</td></tr>
-      <tr><td>Middle Management (ระดับกลาง)</td><td>ใช้ข้อมูลวิเคราะห์ควบคุมงาน</td></tr>
-      <tr><td>Operational (ปฏิบัติการ)</td><td>ทำงานประจำ เช่น ขาย ผลิต การเงิน</td></tr>
-    </table>
-    <h3>ประเภทของระบบสารสนเทศ</h3>
-    <table>
-      <tr><th>ระบบ</th><th>ความหมาย / ตัวอย่าง</th></tr>
-      <tr><td>TPS</td><td>ระบบงานประจำวัน เช่น POS เงินเดือน สินค้าคงคลัง</td></tr>
-      <tr><td>OAS</td><td>ซอฟต์แวร์สำนักงาน เช่น อีเมล เอกสาร ประชุมออนไลน์</td></tr>
-      <tr><td>MIS</td><td>รายงานเพื่อผู้บริหารระดับกลาง เช่น ยอดขาย ต้นทุน</td></tr>
-      <tr><td>EIS</td><td>Dashboard ระดับสูง ตัวชี้วัด KPI</td></tr>
-      <tr><td>DSS</td><td>วิเคราะห์ข้อมูล What-if ด้านการเงิน ตลาด ความเสี่ยง</td></tr>
-      <tr><td>AIS</td><td>ระบบบัญชี เช่น งบการเงิน งบประมาณ ต้นทุน</td></tr>
-      <tr><td>ERP</td><td>ระบบใหญ่เชื่อมโยงทุกแผนก เช่น HR CRM SCM Finance</td></tr>
-    </table>
-    <h3>ระบบเฉพาะทาง</h3>
-    <ul>
-      <li><b>SCADA:</b> ควบคุมงานอุตสาหกรรม เช่น โรงไฟฟ้า น้ำประปา</li>
-      <li><b>CRM:</b> บริหารลูกค้าสัมพันธ์ในค้าปลีกและบริการ</li>
-    </ul>
-    <p><a href="content1.html">← ก่อนหน้า</a> &nbsp; <a href="content3.html">ถัดไป →</a></p>
-  </main>
-</div>
+  <div class="wrap">
+    <!-- แถบด้านข้าง (sidebar) -->
+    <aside>
+      <b>สารบัญ</b>
+      <a href="index.html">หน้าแรก</a>
+      <a href="content1.html">1. IS และ IT</a>
+      <a href="content2.html" class="on">2. ผู้ใช้และประเภทของ IS</a>
+      <a href="content3.html">3. IT พัฒนาประเทศ และ XR</a>
+      <a href="content4.html">4. หน่วยงานของไทย</a>
+      <a href="credit.html">Credit</a>
+    </aside>
 
-<!-- ส่วนท้าย (footer) -->
-<footer>© 2026 สรุปบทเรียนบทที่ 10 | <a href="credit.html" >Credit</a></footer>
+    <!-- เนื้อหาหลัก (main) -->
+    <main>
+      <h2>2. ระดับผู้ใช้และประเภทของ IS</h2>
+      <img src="images/pyramid.svg" alt="ระดับผู้ใช้">
+      <table>
+        <tr>
+          <th>ระดับ</th>
+          <th>ใช้ข้อมูลอย่างไร</th>
+        </tr>
+        <tr>
+          <td>Executive (ระดับสูง)</td>
+          <td>ใช้ข้อมูลภาพรวมเพื่อวางกลยุทธ์</td>
+        </tr>
+        <tr>
+          <td>Middle Management (ระดับกลาง)</td>
+          <td>ใช้ข้อมูลวิเคราะห์ควบคุมงาน</td>
+        </tr>
+        <tr>
+          <td>Operational (ปฏิบัติการ)</td>
+          <td>ทำงานประจำ เช่น ขาย ผลิต การเงิน</td>
+        </tr>
+      </table>
+      <h3>ประเภทของระบบสารสนเทศ</h3>
+      <table>
+        <tr>
+          <th>ระบบ</th>
+          <th>ความหมาย / ตัวอย่าง</th>
+        </tr>
+        <tr>
+          <td>TPS</td>
+          <td>ระบบงานประจำวัน เช่น POS เงินเดือน สินค้าคงคลัง</td>
+        </tr>
+        <tr>
+          <td>OAS</td>
+          <td>ซอฟต์แวร์สำนักงาน เช่น อีเมล เอกสาร ประชุมออนไลน์</td>
+        </tr>
+        <tr>
+          <td>MIS</td>
+          <td>รายงานเพื่อผู้บริหารระดับกลาง เช่น ยอดขาย ต้นทุน</td>
+        </tr>
+        <tr>
+          <td>EIS</td>
+          <td>Dashboard ระดับสูง ตัวชี้วัด KPI</td>
+        </tr>
+        <tr>
+          <td>DSS</td>
+          <td>วิเคราะห์ข้อมูล What-if ด้านการเงิน ตลาด ความเสี่ยง</td>
+        </tr>
+        <tr>
+          <td>AIS</td>
+          <td>ระบบบัญชี เช่น งบการเงิน งบประมาณ ต้นทุน</td>
+        </tr>
+        <tr>
+          <td>ERP</td>
+          <td>ระบบใหญ่เชื่อมโยงทุกแผนก เช่น HR CRM SCM Finance</td>
+        </tr>
+      </table>
+      <h3>ระบบเฉพาะทาง</h3>
+      <ul>
+        <li><b>SCADA:</b> ควบคุมงานอุตสาหกรรม เช่น โรงไฟฟ้า น้ำประปา</li>
+        <li><b>CRM:</b> บริหารลูกค้าสัมพันธ์ในค้าปลีกและบริการ</li>
+      </ul>
+      <p><a href="content1.html">← ก่อนหน้า</a> &nbsp; <a href="content3.html">ถัดไป →</a></p>
+    </main>
+  </div>
+
+  <!-- ส่วนท้าย (footer) -->
+  <footer>© 2026 สรุปบทเรียนบทที่ 10 | <a href="credit.html">Credit</a></footer>
 
 </body>
+
 </html>
