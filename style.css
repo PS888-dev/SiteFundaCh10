@@ -1,0 +1,54 @@
+/* ===== สไตล์ทั้งเว็บ (ธีมฟ้า-ส้ม ตามเว็บคณะ) ===== */
+
+/* สีที่ใช้ทั้งเว็บ (แก้สีที่นี่ที่เดียว) */
+:root{--sky:#3dbcf7;--blue:#4a7fd6;--navy:#0f3d6e;--orange:#c75b00;--aqua:#e6f8fa}
+
+/* ฟอนต์และพื้นหลังของหน้า */
+body{font-family:Prompt,Tahoma,sans-serif;margin:0;background:var(--aqua);color:#1d2f3d;line-height:1.8}
+a{color:var(--blue)}
+
+/* ส่วนหัว: ไล่สีฟ้า + ขอบล่างโค้งเหมือนคลื่น */
+header{background:linear-gradient(#3dbcf7,#bdeafc);color:var(--navy);text-align:center;padding:24px 16px 44px;border-radius:0 0 50% 50% / 0 0 40px 40px}
+header h1{margin:0;font-size:28px}
+header p{margin:4px 0 0}
+
+/* โลโก้ 3 มิติ: วงกลมสีขาว 2 ด้าน หมุนรอบแกนตั้ง (เอาเมาส์ชี้เพื่อหยุดหมุน) */
+.logo3d{width:110px;height:110px;margin:0 auto 10px;perspective:600px}
+.logo3d div{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:spin 8s linear infinite}
+.logo3d:hover div{animation-play-state:paused}
+.logo3d img{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(15,61,110,.3);backface-visibility:hidden}
+.logo3d img+img{transform:rotateY(180deg)}
+@keyframes spin{to{transform:rotateY(360deg)}}
+
+/* แถบเมนู: ตัวอักษรสีส้ม หน้าที่เปิดอยู่เป็นสีน้ำเงิน */
+nav{background:#fff;text-align:center;padding:6px;margin:-24px auto 0;max-width:1000px;border-radius:30px;box-shadow:0 4px 14px rgba(15,61,110,.15);position:relative}
+nav a{color:var(--orange);display:inline-block;padding:8px 14px;border-radius:20px;text-decoration:none}
+nav a:hover{background:var(--aqua)}
+nav a.on{background:var(--blue);color:#fff}
+
+/* แบ่งหน้า 2 ฝั่ง: sidebar ซ้าย + เนื้อหาขวา */
+.wrap{display:flex;gap:20px;max-width:1100px;margin:24px auto;padding:0 12px}
+aside,main{background:#fff;border-radius:18px;box-shadow:0 4px 14px rgba(15,61,110,.1)}
+aside{width:240px;padding:16px;align-self:flex-start}
+aside a{display:block;padding:6px 10px;border-radius:10px;color:var(--navy);text-decoration:none}
+aside a:hover{background:var(--aqua)}
+aside a.on{background:var(--blue);color:#fff}
+main{flex:1;padding:26px;min-width:0}
+
+/* หัวข้อ ตาราง รูป กล่องโน้ต */
+h2{color:var(--navy);border-left:6px solid var(--sky);padding-left:10px}
+h3{color:var(--blue)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{border:1px solid #d3e3ea;padding:8px 10px;text-align:left}
+th{background:var(--blue);color:#fff;font-weight:500}
+tr:nth-child(even) td{background:#f4fbfc}
+img,video{max-width:100%;border-radius:12px}
+.note{background:var(--aqua);border-left:5px solid var(--sky);border-radius:10px;padding:10px 14px;margin:14px 0}
+
+/* ส่วนท้าย */
+footer{background:var(--navy);color:#fff;text-align:center;padding:18px}
+footer a{color:#fff}
+
+/* จอมือถือ */
+@media(max-width:800px){.wrap{flex-direction:column}aside{width:auto}}
+@media(prefers-reduced-motion:reduce){.logo3d div{animation:none}}
